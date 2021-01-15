@@ -5,7 +5,6 @@ module.exports = {
     es6: true
   },
   parser: 'babel-eslint',
-  plugins: ['react-hooks'],
   extends: ['airbnb'],
   rules: {
     'linebreak-style': 0,

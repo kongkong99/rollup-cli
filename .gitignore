@@ -1,3 +1,7 @@
+es
+dist
+lib
+
 # Logs
 logs
 *.log

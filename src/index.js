@@ -1,9 +1,6 @@
-import isIdentityCard from './isIdentityCard';
-
-export {
-  isIdentityCard,
-};
+import upperCase from './upperCase';
 
 export default {
-  isIdentityCard
+  upperCase
 };
+
