@@ -4,30 +4,23 @@ const path = require('path');
 const serve = require('rollup-plugin-serve');
 const configList = require('./rollup.config');
 
-const resolveFile = function (filePath) {
-  return path.join(__dirname, '..', filePath)
+const resolvePath = function (...paths) {
+  return path.join(__dirname, '../', ...paths)
 }
-const PORT = 3001;
 
+const PORT = 3003;
 
-configList.map((config, index) => {
+const config = configList[0]
+config.output.sourcemap = true;
 
-  config.output.sourcemap = true;
+config.plugins = [
+  ...config.plugins,
+  ...[
+    serve({
+      port: PORT,
+      contentBase: [resolvePath('example'), resolvePath('dist')]
+    })
+  ],
+]
 
-  if (index === 0) {
-    config.plugins = [
-      ...config.plugins,
-      ...[
-        serve({
-          port: PORT,
-          contentBase: [resolveFile('example'), resolveFile('dist')]
-        })
-      ]
-    ]
-  }
-
-  return config;
-})
-
-
-module.exports = configList;
+module.exports = config;

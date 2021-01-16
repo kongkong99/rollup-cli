@@ -1,6 +1,6 @@
 const path = require('path');
 const { babel } = require('@rollup/plugin-babel');
-const less = require('rollup-plugin-less');
+// const less = require('rollup-plugin-less');
 const nodeResolve = require('@rollup/plugin-node-resolve');
 const fs = require('fs')
 const commonjs = require('@rollup/plugin-commonjs');
@@ -28,7 +28,7 @@ const babelOptions = {
 }
 
 const plugins = [
-  less(),
+  // less(),
   nodeResolve(),
   commonjs(),
   json(),
