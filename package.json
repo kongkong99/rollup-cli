@@ -32,6 +32,10 @@
     "@babel/runtime": "7.12.5",
     "lodash": "4.17.20"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kongkong99/rollup-cli"
+  },
   "keywords": [
     "rollup",
     "rollup cli",

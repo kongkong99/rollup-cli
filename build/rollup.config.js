@@ -39,8 +39,6 @@ const plugins = [
   }),
 ]
 
-console.log(fs.readdirSync(resolvePath('src')))
-
 // 打包esm模块，支持按需加载和全部引入
 let esmBuild = [];
 fs.readdirSync(resolvePath('src')).forEach(filename => {
